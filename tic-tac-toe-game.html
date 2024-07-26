@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X/O</title>
+        <link rel="icon" href="tic-tac-toe-game.png">
+        <link rel="stylesheet" href="tic-tac-toe-game.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="no-border-top no-border-left no-border-right"><h1>X/O GAME</h1></header>
+            <div class="gameboard no-border-right no-border-left no-border-bottom">
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-left no-border-top" id="index1"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-top" id="index2"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-right no-border-top" id="index3"></div>
+
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-left" id="index4"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box" id="index5"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-right" id="index6"></div>
+
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-bottom no-border-left" id="index7"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-bottom" id="index8"></div>
+                <div onmouseout="remove_dot(this.id)" onmouseover="dot_place(this.id)" onclick="game(this.id)" class="box no-border-right no-border-bottom" id="index9"></div>
+            </div>
+            <button id="reset_button" onclick="reset_gameboard()">Reset</button>
+            <div class="score">
+                <div>
+                    <div>O: <span id="o_score">0</span></div>
+                    <div>X: <span id="x_score">0</span></div>
+                </div>
+                <button id="reset_score_button" onclick="clear_data()">Reset Score</button>
+            </div>
+        </div>
+        <script src="tic-tac-toe-game.js"></script>
+    </body>
+</html>
